@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     String shutters[] = {"192.168.1.103", "192.168.1.105", "192.168.1.102", "192.168.1.106"};
     static ArrayList<RollerBlinds> rb = new ArrayList<>();
-    int settings[][] = {{0, 10, 50, 0}, {99, 100, 0, 0}, {99, 100, 100, 99}};
+    int settings[][] = {{0, 0, 0, 0}, {99, 100, 0, 0}, {99, 100, 100, 99}};
     public String answer = "";
 
-    ImageButton iBtnAllOff, iBtnBreakfast, iBtnSleep;
+    ImageButton iBtnAllOff, iBtnBreakfast, iBtnSleep, iBtnAddProfile, iBtnStop;
     TextView infoBox;
 
     @Override
@@ -40,12 +41,20 @@ public class MainActivity extends AppCompatActivity {
         iBtnAllOff = findViewById(R.id.imageButton1);
         iBtnBreakfast = findViewById(R.id.imageButton2);
         iBtnSleep = findViewById(R.id.imageButton3);
+        iBtnAddProfile = findViewById(R.id.imageButton0);
+        iBtnStop = findViewById(R.id.imageButton5);
 
         String allIPs = "";
         for (RollerBlinds i : rb) {
             allIPs += i.ip + " | ";
         }
         infoBox.setText(allIPs);
+    }
+
+    public void btn0_Click(View v) {
+    }
+
+    public void btn5_Click(View v) {
     }
 
     public void btn1_Click(View v) {
@@ -96,7 +105,22 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     //final String myResponse = response.body().string();
                     answer = response.body().string();
-                    // Toast.makeText(MainActivity.this,"Command sent", Toast.LENGTH_LONG).show();
+                    // final String myResponse;
+                    // try {
+                    //     myResponse = response.body().string();
+                    //     MainActivity.this.runOnUiThread(new Runnable() {
+                    //         @Override
+                    //         public void run() {
+                    //             infoBox.setText(myResponse);
+                    //         }
+                    //     });
+                    //     Log.e("interaction", "Response OK");
+                    //
+                    // } catch (IOException e) {
+                    //     e.printStackTrace();
+                    //     Log.e("error", e.getMessage());
+                    // }
+                    // Toast.makeText(MainActivity.this, "Command sent", Toast.LENGTH_LONG).show();
                     // Log.e("interaction", "Command sent");
                 }
 

@@ -15,7 +15,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
         android:background="@drawable/mybutton"
-        android:onClick="btn_Click_Add_Profile"
+        android:onClick="btn0_Click"
         android:scaleType="centerInside"
         android:tint="#FF9800"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/mybutton"
-        android:onClick="btn_Click_Add_Profile"
+        android:onClick="btn5_Click"
         android:scaleType="centerInside"
         android:tint="#FF9800"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:contentDescription="Sunny open window"
-            android:onClick="btn_Click"
+            android:onClick="btn1_Click"
             android:scaleType="centerInside"
             android:tint="#FF9800"
             app:srcCompat="@drawable/sun_morning" />
@@ -89,6 +89,7 @@
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:contentDescription="Coffee cup with PC screen"
+            android:onClick="btn2_Click"
             android:scaleType="centerInside"
             android:tint="#FF9800"
             app:srcCompat="@drawable/breakfast" />
@@ -101,6 +102,7 @@
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:contentDescription="Sleeping bed"
+            android:onClick="btn3_Click"
             android:scaleType="centerInside"
             android:tint="#FF9800"
             app:srcCompat="@drawable/bed_sleep" />
