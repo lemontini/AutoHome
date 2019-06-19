@@ -4,59 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2D2F32"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="624dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        android:weightSum="4"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/mybutton"
+        android:onClick="btn_Click_Add_Profile"
+        android:scaleType="centerInside"
+        android:tint="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pause_128" />
+
+    <ImageButton
+        android:id="@+id/imageButton0"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/mybutton"
+        android:onClick="btn_Click_Add_Profile"
+        android:scaleType="centerInside"
+        android:tint="#FF9800"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus_128" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:text="TextView"
+        android:textColor="#CDFF9800"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageButton0"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="TextView" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        android:paddingLeft="2.5dp"
+        android:paddingTop="2.5dp"
+        android:paddingRight="2.5dp"
+        android:paddingBottom="2.5dp"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/imageButton1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="2.5dp"
             android:layout_weight="1"
+            android:background="@drawable/mybutton"
             android:contentDescription="Sunny open window"
-            android:onClick="btn1_Click"
+            android:onClick="btn_Click"
             android:scaleType="centerInside"
+            android:tint="#FF9800"
             app:srcCompat="@drawable/sun_morning" />
 
         <ImageButton
             android:id="@+id/imageButton2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="2.5dp"
             android:layout_weight="1"
+            android:background="@drawable/mybutton"
             android:contentDescription="Coffee cup with PC screen"
-            android:onClick="btn2_Click"
             android:scaleType="centerInside"
+            android:tint="#FF9800"
             app:srcCompat="@drawable/breakfast" />
 
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_margin="2.5dp"
             android:layout_weight="1"
+            android:background="@drawable/mybutton"
             android:contentDescription="Sleeping bed"
-            android:onClick="btn3_Click"
             android:scaleType="centerInside"
+            android:tint="#FF9800"
             app:srcCompat="@drawable/bed_sleep" />
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
