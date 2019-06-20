@@ -1,5 +1,6 @@
 package com.example.autohome;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         defDevices();
+
+        saveDevices();
+
+        loadDevices();
 
         infoBox = findViewById(R.id.textView);
         iBtnAllOff = findViewById(R.id.imageButton1);
@@ -136,6 +141,22 @@ public class MainActivity extends AppCompatActivity {
         rb.add(new RollerBlinds("192.168.1.103"));
         rb.add(new RollerBlinds("192.168.1.105"));
         rb.add(new RollerBlinds("192.168.1.106"));
+        ArrayList<Device> dev = new ArrayList<>();
+        // TODO: dev.add(new DeviceClass());
+    }
+
+    public void saveDevices() {
+        SharedPreferences spref = getSharedPreferences("com.example.autohome", MODE_PRIVATE);
+        for (int i = 0; i < rb.size(); i++) {
+            spref.edit().putString("dev" + i, rb.get(i).getIP()).apply();
+        }
+    }
+
+    public void loadDevices() {
+        SharedPreferences spref = getSharedPreferences("com.example.autohome", MODE_PRIVATE);
+        for (int i = 0; i < rb.size(); i++) {
+            spref.edit().putString("dev" + i, rb.get(i).getIP()).apply();
+        }
     }
 
     class RollerBlinds {
