@@ -3,7 +3,7 @@
     <item android:state_pressed="true">
         <shape android:shape="oval" >
             <stroke android:width="1dip" android:color="#FF9800" />
-            <gradient android:type="radial" android:gradientRadius="25dp" android:startColor="#2B2B2C" android:endColor="#3C3F41" />
+            <gradient android:type="radial" android:gradientRadius="35dp" android:startColor="#3C3F41" android:centerColor="#3C3F41" android:endColor="#000000" />
         </shape>
     </item>
     <item android:state_focused="true">
@@ -16,7 +16,7 @@
     <item>
         <shape android:shape="oval" >
             <stroke android:width="1dip" android:color="#FF9800" />
-            <gradient android:type="radial" android:gradientRadius="25dp" android:startColor="#3C3F41" android:endColor="#2B2B2C" />
+            <gradient android:type="radial" android:gradientRadius="35dp" android:startColor="#3C3F41" android:centerColor="#3C3F41" android:endColor="#2B2B2C" />
         </shape>
     </item>
 </selector>

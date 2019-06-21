@@ -1,4 +1,4 @@
-package com.example.autohome;
+package com.montini.autohome;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

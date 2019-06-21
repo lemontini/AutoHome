@@ -1,4 +1,4 @@
-package com.example.autohome;
+package com.montini.autohome;
 
 import com.fasterxml.jackson.annotation.*;
 

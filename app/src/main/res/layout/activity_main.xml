@@ -86,7 +86,7 @@
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:contentDescription="Coffee cup with PC screen"
-            android:onClick="btn2_Click"
+            android:onClick="btn1_Click"
             android:scaleType="centerInside"
             android:tint="#FF9800"
             app:srcCompat="@drawable/breakfast" />
@@ -99,10 +99,11 @@
             android:layout_weight="1"
             android:background="@drawable/mybutton"
             android:contentDescription="Sleeping bed"
-            android:onClick="btn3_Click"
+            android:onClick="btn1_Click"
             android:scaleType="centerInside"
             android:tint="#FF9800"
             app:srcCompat="@drawable/bed_sleep" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
